@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div>a {
+            margin: 2px;
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            display: inline-block;
+            position: relative;
+        }
+
+        a::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: rgb(8, 0, 255);
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+
+        div>a:hover::after {
+            transform: scaleX(1);
+            width: 100%;
+            transform-origin: bottom left;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="width:100%; height: 100vh; ">
+
+        <!-- header -->
+        <div style="width: 100%; height: 10%; display: flex; align-items: center; justify-content: center;">
+            <h2>CDAC Assignments</h2>
+        </div>
+        <hr>
+
+        <!-- main -->
+        <div style="width: 100%; height: 89%; overflow: hidden; display: flex; flex-direction: row;">
+
+            <!-- side bar -->
+            <div style="width: 10%; display: flex; flex-direction: column;  align-items: center;">
+                <a href="./practice.html" target="f1">Open Practce 1</a>
+                <a href="./practice2.html" target="f1">Open Practce 2</a>
+                <a href="./practice3.html" target="f1">Open Practce 3</a>
+                <a href="./preactice4.html" target="f1">Open Practce 4</a>
+                <a href="./practice5.html" target="f1">Open Practce 5</a>
+            </div>
+            <div style="width: 2px;height: 100vh; background-color: black;"></div>
+
+            <!-- body -->
+            <div style="width: 90%; background-color: beige;">
+                <iframe src="practice.html" name="f1" width="100%" height="100%"></iframe>
+                <iframe src="practice2.html" name="f1" width="100%" height="100%"></iframe>
+                <iframe src="practice3.html" name="f1" width="100%" height="100%"></iframe>
+                <iframe src="preactice4.html" name="f1" width="100%" height="100%"></iframe>
+                <iframe src="practice5.html" name="f1" width="100%" height="100%"></iframe>
+
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
