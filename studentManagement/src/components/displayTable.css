@@ -1,0 +1,15 @@
+.whole__body {
+    width: 100%;
+    height: 100vh;
+}
+
+.main__body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table__body {
+    width: 50%;
+}
+
