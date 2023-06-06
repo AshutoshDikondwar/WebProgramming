@@ -9,6 +9,7 @@ function App() {
   const [data, setData] = useState([{ roll: 1, name: "abc", age: 12 },
   { roll: 2, name: "def", age: 13 },
   { roll: 3, name: "ghi", age: 14 },
+  { roll: 4, name: "jkl", age: 15 }
   ])
 
   const alterInfo = (info) => {
