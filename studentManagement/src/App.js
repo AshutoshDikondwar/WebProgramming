@@ -2,14 +2,15 @@ import { useState } from 'react';
 import './App.css';
 import DisplayTable from './components/DisplayTable';
 import 'bootstrap/dist/css/bootstrap.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Update from './components/Update';
 
 
 
 function App() {
-  const [data, setData] = useState([{ roll: 1, name: "abc", age: 12 },
-  { roll: 2, name: "def", age: 13 },
-  { roll: 3, name: "ghi", age: 14 },
-  { roll: 4, name: "jkl", age: 15 }
+  const [data, setData] = useState([{ empid: 1, ename: "abc", sal: 12 },
+  { empid: 2, ename: "def", sal: 13 },
+  { empid: 3, ename: "ghi", sal: 14 },
   ])
 
   const alterInfo = (info) => {
@@ -21,8 +22,16 @@ function App() {
 
   return (
     <div >
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<DisplayTable student={data} sendData={alterInfo} />} />
+          <Route path="/edit/emp/:id" element={<Update info={data}/>} />
 
-      <DisplayTable student={data} sendData={alterInfo} />
+        </Routes>
+      </BrowserRouter>
+
+
+
 
     </div>
   );
